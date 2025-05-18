@@ -1,16 +1,22 @@
-# Format of simulated data for AWS S3 storage
+# Formats simulated data for AWS S3 storage
 import json
-# Generation of random values for realistic call volumes
+# Generates random values for realistic call volumes
 import random
 
 
 def generate_call_data(num_calls=100):
-    calls = []
+    """
+    Simulates call volume data as a list of directories.
+    Each directory represents a call with various attributes.
+    """
+    calls = []  # Initialzes empty list to store simulated calls
     for i in range(num_calls):
         call = {
             "id": i + 1,
+            "caller_name": f"Caller_{i+1}",
             "duration": random.randint(1, 600),
-            "status": random.choice(["active", "waiting", "completed"])
+            "status": random.choice(["active", "waiting", "completed"]),
+            "priority": random.choice(["low", "medium", "high"])
         }
         calls.append(call)
     return calls
