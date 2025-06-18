@@ -1,0 +1,14 @@
+{
+  "Records": [
+    {
+      "s3": {
+        "bucket": {
+          "name": "call-volume-data"
+        },
+        "object": {
+          "key": "simulated_calls.json"
+        }
+      }
+    }
+  ]
+}
