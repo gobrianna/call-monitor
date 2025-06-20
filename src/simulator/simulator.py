@@ -15,7 +15,6 @@ def generate_call_data(num_calls=100):
     return [
         {
             "id": i + 1,
-            "caller_name": f"Caller_{i + 1}",
             "duration": random.randint(1, 600),
             "status": random.choice(["active", "waiting", "completed"]),
             "priority": random.choice(["low", "medium", "high"]),
